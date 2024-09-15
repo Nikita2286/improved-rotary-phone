@@ -1,24 +1,9 @@
 #pragma once
 
-class Board {
-    int width;
-    int height;
+struct Point {
+    int x;
+    int y;
 
-public:
-    Board(int w, int h); 
-    int GetWidth() const; 
-    int GetHeight() const; 
+    Point() : x(0), y(0) {}  
+    Point(int xPos, int yPos) : x(xPos), y(yPos) {}  
 };
-
-
-Board::Board(int w, int h) : width(w), height(h) {}
-
-
-int Board::GetWidth() const {
-    return width;
-}
-
-
-int Board::GetHeight() const {
-    return height;
-}
